@@ -17,6 +17,8 @@ Brown CBC's Bioconductor Workshop 2 Materials
 Purpose
 =======
 
+THS SITE IS A PLACEHOLDER - NOTEBOOKS WILL BE ADDED BY MONDAY FEBRUARY 19TH
+
 This site hosts the Jupyter notebook for the CBC Bioconductor Workshop 2.  The notebook will be served on the web as a static HTML page, meaning that while it looks like a live notebook, it cannot be edited.  To obtain an editable notebook file, please click the respective 'Download Notebook' link.  These X notebooks were created by Levi Waldron.
 
 .. raw:: html
