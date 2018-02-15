@@ -1,0 +1,57 @@
+Bioconductor Workshop 2 Setup Instructions
+==========================================
+
+**Configure the AWS Command Line Interface**
+
+Type::
+
+	aws configure
+
+and provide the requested information, making sure to specify the correct region.
+
+**Retrieve the Startup Script and Files**
+
+Download the following file from the CBC's private repository (must use your CBC-associated Github account):
+
+https://github.com/compbiocore/workshop-utilities/blob/master/access_ips.sh
+
+Download the workshop instance private key 'aleith-workshop.pem' from Oscar, located in the following place::
+
+	/gpfs/data/cbc/keys/aleith-workshop.pem
+
+Copy the keyfile into the .ssh hidden directory in your home directory, creating it if it does not already exist.  It is also necessary to ensure that the keyfile has the proper permissions as designated by Amazon::
+
+	chmod 400 keyfile.pem
+
+**Run the Startup Script**
+
+Execute the script by typing::
+
+	bash access_ips.sh
+
+The script will then use the AWS CLI to retrieve the IPs, format them, and place them into a file.  Once it has done so, it will ssh into each instance in turn and activate a detached screen running Jupyter.  Finally, it will append the port to each IP in the file, yielding a file 'ips_newline_port.txt' which has each instance on its own line with the port appended.  Each line from this file can be copied directly into a browser bar to access the respective Jupyter instance.
+
+The Jupyter password is 'cobre'.
+
+Jupyter takes approximately 60 seconds to fully initialize, so wait one minute and then test a few of the entries in the IP file to be sure that Jupyter is actually running.
+
+**Manual Activation (fallback)**
+
+To ssh into the instance, using the following syntax (assuming the keyfile is in the .ssh folder in your home directory)::
+
+	ssh -oStrictHostKeyChecking=no -i ~/.ssh/aleith-workshop.pem ubuntu@instance_ip
+
+Inside the instance, you can determine whether or not the screen is active by typing::
+
+	screen -ls
+
+If no screen is running, you can manually generate the detached screen running Jupyter::
+
+	screen  -dm bash -c '/home/ubuntu/miniconda/bin/jupyter notebook'
+
+If, after waiting for 10 seconds, that screen too has died, you can proceed in an even more manual fashion with the following two commands::
+
+	screen -S notebook
+	jupyter notebook
+
+Any errors elicited by this last approach will be visible in the terminal and can be subsequently addressed.

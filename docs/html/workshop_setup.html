@@ -1,0 +1,151 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bioconductor Workshop 2 Setup Instructions &#8212; Bioconductor Workshop 2 1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Bioconductor Workshop 2 Jupyter Notebooks" href="notebook.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bioconductor-workshop-2-setup-instructions">
+<h1>Bioconductor Workshop 2 Setup Instructions<a class="headerlink" href="#bioconductor-workshop-2-setup-instructions" title="Permalink to this headline">¶</a></h1>
+<p><strong>Configure the AWS Command Line Interface</strong></p>
+<p>Type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">aws</span> <span class="n">configure</span>
+</pre></div>
+</div>
+<p>and provide the requested information, making sure to specify the correct region.</p>
+<p><strong>Retrieve the Startup Script and Files</strong></p>
+<p>Download the following file from the CBC’s private repository (must use your CBC-associated Github account):</p>
+<p><a class="reference external" href="https://github.com/compbiocore/workshop-utilities/blob/master/access_ips.sh">https://github.com/compbiocore/workshop-utilities/blob/master/access_ips.sh</a></p>
+<p>Download the workshop instance private key ‘aleith-workshop.pem’ from Oscar, located in the following place:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">gpfs</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">cbc</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">aleith</span><span class="o">-</span><span class="n">workshop</span><span class="o">.</span><span class="n">pem</span>
+</pre></div>
+</div>
+<p>Copy the keyfile into the .ssh hidden directory in your home directory, creating it if it does not already exist.  It is also necessary to ensure that the keyfile has the proper permissions as designated by Amazon:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">400</span> <span class="n">keyfile</span><span class="o">.</span><span class="n">pem</span>
+</pre></div>
+</div>
+<p><strong>Run the Startup Script</strong></p>
+<p>Execute the script by typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">access_ips</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>The script will then use the AWS CLI to retrieve the IPs, format them, and place them into a file.  Once it has done so, it will ssh into each instance in turn and activate a detached screen running Jupyter.  Finally, it will append the port to each IP in the file, yielding a file ‘ips_newline_port.txt’ which has each instance on its own line with the port appended.  Each line from this file can be copied directly into a browser bar to access the respective Jupyter instance.</p>
+<p>The Jupyter password is ‘cobre’.</p>
+<p>Jupyter takes approximately 60 seconds to fully initialize, so wait one minute and then test a few of the entries in the IP file to be sure that Jupyter is actually running.</p>
+<p><strong>Manual Activation (fallback)</strong></p>
+<p>To ssh into the instance, using the following syntax (assuming the keyfile is in the .ssh folder in your home directory):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">oStrictHostKeyChecking</span><span class="o">=</span><span class="n">no</span> <span class="o">-</span><span class="n">i</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">aleith</span><span class="o">-</span><span class="n">workshop</span><span class="o">.</span><span class="n">pem</span> <span class="n">ubuntu</span><span class="nd">@instance_ip</span>
+</pre></div>
+</div>
+<p>Inside the instance, you can determine whether or not the screen is active by typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">screen</span> <span class="o">-</span><span class="n">ls</span>
+</pre></div>
+</div>
+<p>If no screen is running, you can manually generate the detached screen running Jupyter:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">screen</span>  <span class="o">-</span><span class="n">dm</span> <span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;/home/ubuntu/miniconda/bin/jupyter notebook&#39;</span>
+</pre></div>
+</div>
+<p>If, after waiting for 10 seconds, that screen too has died, you can proceed in an even more manual fashion with the following two commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">screen</span> <span class="o">-</span><span class="n">S</span> <span class="n">notebook</span>
+<span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+<p>Any errors elicited by this last approach will be visible in the terminal and can be subsequently addressed.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Bioconductor Workshop 2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://compbiocore.github.io/cbc-workshops/">CBC Workshop index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Bioconductor Workshop 2 Jupyter Notebooks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bioconductor Workshop 2 Setup Instructions</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="notebook.html" title="previous chapter">Bioconductor Workshop 2 Jupyter Notebooks</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Andrew Leith.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/workshop_setup.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
