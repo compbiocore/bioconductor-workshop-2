@@ -41,12 +41,14 @@
             
   <div class="section" id="bioconductor-workshop-2-setup-instructions">
 <h1>Bioconductor Workshop 2 Setup Instructions<a class="headerlink" href="#bioconductor-workshop-2-setup-instructions" title="Permalink to this headline">¶</a></h1>
+<p><strong>Copy the AMI</strong></p>
+<p>Copy the AMI with name ‘placeholder’ and ID ‘placeholder’ to the region you intend to use for your instances.</p>
 <p><strong>Configure the AWS Command Line Interface</strong></p>
 <p>Type:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">aws</span> <span class="n">configure</span>
 </pre></div>
 </div>
-<p>and provide the requested information, making sure to specify the correct region.</p>
+<p>and provide the requested information, making sure to specify the correct region.  If you have already provided this information before, you can accept the existing keys and only change the region.</p>
 <p><strong>Retrieve the Startup Script and Files</strong></p>
 <p>Download the following file from the CBC’s private repository (must use your CBC-associated Github account):</p>
 <p><a class="reference external" href="https://github.com/compbiocore/workshop-utilities/blob/master/access_ips.sh">https://github.com/compbiocore/workshop-utilities/blob/master/access_ips.sh</a></p>
@@ -66,6 +68,8 @@
 <p>The script will then use the AWS CLI to retrieve the IPs, format them, and place them into a file.  Once it has done so, it will ssh into each instance in turn and activate a detached screen running Jupyter.  Finally, it will append the port to each IP in the file, yielding a file ‘ips_newline_port.txt’ which has each instance on its own line with the port appended.  Each line from this file can be copied directly into a browser bar to access the respective Jupyter instance.</p>
 <p>The Jupyter password is ‘cobre’.</p>
 <p>Jupyter takes approximately 60 seconds to fully initialize, so wait one minute and then test a few of the entries in the IP file to be sure that Jupyter is actually running.</p>
+<p><em>Partial Activation Contingency - Poorly Tested</em></p>
+<p>In the event that a technical problem causes the script to terminate in the middle of its operation, you will have some instances running Jupyter and others not.  Since the script activates Jupyter in every instance, that will lead to some instances having two Jupyters running, potentially causing weird behavior.  To resolve this issue, open the script and uncomment line 9.  With line 9 in place, the script will delete all screens before starting the Jupyter screen, ensuring only one screen remains active.</p>
 <p><strong>Manual Activation (fallback)</strong></p>
 <p>To ssh into the instance, using the following syntax (assuming the keyfile is in the .ssh folder in your home directory):</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">oStrictHostKeyChecking</span><span class="o">=</span><span class="n">no</span> <span class="o">-</span><span class="n">i</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">aleith</span><span class="o">-</span><span class="n">workshop</span><span class="o">.</span><span class="n">pem</span> <span class="n">ubuntu</span><span class="nd">@instance_ip</span>

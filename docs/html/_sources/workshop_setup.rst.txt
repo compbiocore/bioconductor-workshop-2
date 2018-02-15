@@ -1,13 +1,17 @@
 Bioconductor Workshop 2 Setup Instructions
 ==========================================
 
+**Copy the AMI**
+
+Copy the AMI with name 'placeholder' and ID 'placeholder' to the region you intend to use for your instances.
+
 **Configure the AWS Command Line Interface**
 
 Type::
 
 	aws configure
 
-and provide the requested information, making sure to specify the correct region.
+and provide the requested information, making sure to specify the correct region.  If you have already provided this information before, you can accept the existing keys and only change the region.
 
 **Retrieve the Startup Script and Files**
 
@@ -34,6 +38,10 @@ The script will then use the AWS CLI to retrieve the IPs, format them, and place
 The Jupyter password is 'cobre'.
 
 Jupyter takes approximately 60 seconds to fully initialize, so wait one minute and then test a few of the entries in the IP file to be sure that Jupyter is actually running.
+
+*Partial Activation Contingency - Poorly Tested*
+
+In the event that a technical problem causes the script to terminate in the middle of its operation, you will have some instances running Jupyter and others not.  Since the script activates Jupyter in every instance, that will lead to some instances having two Jupyters running, potentially causing weird behavior.  To resolve this issue, open the script and uncomment line 9.  With line 9 in place, the script will delete all screens before starting the Jupyter screen, ensuring only one screen remains active.
 
 **Manual Activation (fallback)**
 
