@@ -42,14 +42,20 @@
   <div class="section" id="bioconductor-workshop-2-setup-instructions">
 <h1>Bioconductor Workshop 2 Setup Instructions<a class="headerlink" href="#bioconductor-workshop-2-setup-instructions" title="Permalink to this headline">¶</a></h1>
 <p><strong>Copy the AMI</strong></p>
-<p>Copy the AMI with name ‘placeholder’ and ID ‘placeholder’ to the region you intend to use for your instances.</p>
+<p>Copy the AMI with name ‘Levi image Thursday 7 PM’ and ID ‘ami-bfdaeeda’ to the region you intend to use for your instances.</p>
+<p><strong>Create the Instances</strong></p>
+<p>Select:</p>
+<p>t2.medium</p>
+<p>50 GB storage</p>
+<p>Existing security group ‘workshop’ (at the very bottom of the list)</p>
+<p>Keypair ‘aleith-workshop’</p>
 <p><strong>Configure the AWS Command Line Interface</strong></p>
 <p>Type:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">aws</span> <span class="n">configure</span>
 </pre></div>
 </div>
 <p>and provide the requested information, making sure to specify the correct region.  If you have already provided this information before, you can accept the existing keys and only change the region.</p>
-<p><strong>Retrieve the Startup Script and Files</strong></p>
+<p><strong>Retrieve the Jupyter Startup Script and Credential File</strong></p>
 <p>Download the following file from the CBC’s private repository (must use your CBC-associated Github account):</p>
 <p><a class="reference external" href="https://github.com/compbiocore/workshop-utilities/blob/master/access_ips.sh">https://github.com/compbiocore/workshop-utilities/blob/master/access_ips.sh</a></p>
 <p>Download the workshop instance private key ‘aleith-workshop.pem’ from Oscar, located in the following place:</p>

@@ -3,7 +3,19 @@ Bioconductor Workshop 2 Setup Instructions
 
 **Copy the AMI**
 
-Copy the AMI with name 'placeholder' and ID 'placeholder' to the region you intend to use for your instances.
+Copy the AMI with name 'Levi image Thursday 7 PM' and ID 'ami-bfdaeeda' to the region you intend to use for your instances.
+
+**Create the Instances**
+
+Select:
+
+t2.medium
+
+50 GB storage
+
+Existing security group 'workshop' (at the very bottom of the list)
+
+Keypair 'aleith-workshop'
 
 **Configure the AWS Command Line Interface**
 
@@ -13,7 +25,7 @@ Type::
 
 and provide the requested information, making sure to specify the correct region.  If you have already provided this information before, you can accept the existing keys and only change the region.
 
-**Retrieve the Startup Script and Files**
+**Retrieve the Jupyter Startup Script and Credential File**
 
 Download the following file from the CBC's private repository (must use your CBC-associated Github account):
 
