@@ -8,4 +8,13 @@ These X notebooks were created by Levi Waldron.
 
 
 	<p>Jupyter notebook 1</p>
-    <iframe src="_static/placeholder.html" height="750px" width="800px"></iframe>
+    <iframe src="_static/BrownCOBREDay2Session1.html" height="750px" width="800px"></iframe>
+
+    <p>Jupyter notebook 1</p>
+    <iframe src="_static/BrownCOBREDay2Session2.html" height="750px" width="800px"></iframe>
+
+    <p>Jupyter notebook 1</p>
+    <iframe src="_static/BrownCOBREDay2Session3.html" height="750px" width="800px"></iframe>
+
+    <p>Jupyter notebook 1</p>
+    <iframe src="_static/BrownCOBREDay2Session4.html" height="750px" width="800px"></iframe>
