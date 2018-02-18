@@ -19,16 +19,19 @@ Brown CBC's Bioconductor Workshop 2 Materials
 Purpose
 =======
 
-THS SITE IS A PLACEHOLDER - NOTEBOOKS WILL BE ADDED BY MONDAY FEBRUARY 19TH
-
 This site hosts the Jupyter notebook for the CBC Bioconductor Workshop 2.  The notebook will be served on the web as a static HTML page, meaning that while it looks like a live notebook, it cannot be edited.  To obtain an editable notebook file, please click the respective 'Download Notebook' link.  These X notebooks were created by Levi Waldron.
 
 .. raw:: html
 
 
 
-	<p><a href="placeholder_for_raw_github_link.html" download>Download Notebook 1</a></p>	
+	<p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session1.ipynb" download>Download Notebook 1</a></p>	
 	
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session2.ipynb" download>Download Notebook 2</a></p> 
+
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session3.ipynb" download>Download Notebook 3</a></p> 
+
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session4.ipynb" download>Download Notebook 4</a></p> 
 
 
 Contact
