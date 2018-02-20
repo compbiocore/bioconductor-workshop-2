@@ -23,23 +23,29 @@ This site hosts the Jupyter notebooks for the CBC Bioconductor Workshop 2.  The 
 
 .. raw:: html
 
+   <h2>Notebook 1</h2>
 
+	<p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session1.ipynb" download>Download full notebook (.ipynb)</a></p>	
 
-	<p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session1.ipynb" download>Download Notebook 1 - full notebook</a></p>	
-
-   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session1.r" download>Download Notebook 1 - R code only</a></p>
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session1.r" download>Download R code only</a></p>
 	
-   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session2.ipynb" download>Download Notebook 2 - full notebook</a></p>
+   <h2>Notebook 1</h2>
 
-   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session2.r" download>Download Notebook 2 - R code only</a></p>
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session2.ipynb" download>Download full notebook (.ipynb)</a></p>
 
-   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session3.ipynb" download>Download Notebook 3 - full notebook</a></p> 
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session2.r" download>Download R code only</a></p>
 
-   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session3.r" download>Download Notebook 3 - R code only</a></p>
+   <h2>Notebook 3</h2>
 
-   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session4.ipynb" download>Download Notebook 4 - full notebook</a></p> 
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session3.ipynb" download>Download full notebook (.ipynb)</a></p> 
 
-   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session4.r" download>Download Notebook 4 - R code only</a></p>
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session3.r" download>Download R code only</a></p>
+
+   <h2>Notebook 4</h2>
+
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session4.ipynb" download>Download full notebook (.ipynb)</a></p> 
+
+   <p><a href="https://raw.githubusercontent.com/compbiocore/bioconductor-workshop-2/master/BrownCOBREDay2Session4.r" download>Download R code only</a></p>
 
 
 Contact
