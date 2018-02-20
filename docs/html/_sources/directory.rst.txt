@@ -10,4 +10,4 @@ Please note that this frame will only become active the morning of the workshop;
 .. raw:: html
 
 	<p>Jupyter Instance Directory</p>
-    <iframe src="_static/test_directory.html" height="750px" width="600px"></iframe>
+    <iframe src="_static/test_directory.html" height="750px" width="700px"></iframe>
