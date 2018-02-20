@@ -16,6 +16,8 @@ Brown CBC's Bioconductor Workshop 2 Materials
 
    workshop_setup
 
+   directory
+
 Purpose
 =======
 
