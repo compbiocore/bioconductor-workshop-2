@@ -3,14 +3,6 @@ Bioconductor Workshop 2 Jupyter Notebooks
 
 These 4 notebooks were created by Levi Waldron.
 
-Markdown | Less | Pretty
-
---- | --- | ---
-
-*Still* | `renders` | **nicely**
-
-1 | 2 | 3
-
 .. raw:: html
 
 
