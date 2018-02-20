@@ -5,7 +5,7 @@ For this workshop, each attendee has been assigned a temporary Amazon instance r
 
 Please locate your name in the list below and click on the link to access your instance.  The password to open Jupyter is 'cobre'.
 
-Please note that this frame will only become active the morning of the workshop; until that time, it will fail to load as the directory has not been generated.  That way we will be able to best accommodate late registrants and ensure everybody is correctly assigned an instance.
+Please note that this frame will only become active the morning of the workshop; until that time, it will yield a 404 error as the directory has not yet been generated.  That way we will be able to best accommodate late registrants and ensure everybody is correctly assigned an instance.
 
 .. raw:: html
 
