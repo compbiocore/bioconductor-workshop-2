@@ -1,4 +1,4 @@
-.. Bioconductor Workshop 1 documentation master file, created by
+.. Bioconductor Workshop 2 documentation master file, created by
    sphinx-quickstart on Thu Feb  8 16:04:06 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -15,6 +15,40 @@ Brown CBC's Bioconductor Workshop 2 Materials
    notebook
 
    workshop_setup
+
+
+
+Workshop Topics
+===============
+
+This workshop, 'Analyses of RNA-seq and ChiP-seq with R/Bioconductor', is designed to expand upon the Bioconductor training provided in the first Bioconductor workshop; it is an intermediate-level lecture that presupposes some knowledge of R like that found in our 'Fundamentals of R' workshop.  The topics presented herein include the following:
+
+* Standard analyses for RNA-seq Data
+   * Approaches to processing raw data from RNA seq experiments
+   * Annotating and importing expression counts
+   * Basic exploratory data analysis
+   * Assessing model fit and dispersion
+
+* Gene-wise Testing in Depth, Including Multiple Testing
+   * Differential expression analysis with the 'edgeR' package
+   * Comparison of the 'edgeR' and 'DESeq2' packages for differential expression analysis
+   * Hypothesis testing for count data
+   * Approaches to multiple hypothesis testing result correction (e.g. false discovery rate calculation)
+   * Visualizing differentially expressed genes/transcripts
+
+* Gene Set Analysis
+   * Over-representation analysis
+   * Gene set enrichment analysis
+   * Network-based enrichment analysis
+   * Region-based enrichment analysis
+   * Resources for these types of analyses (e.g. GO, KEGG, MSigDb)
+
+* Analyses of ChIP-seq Data
+   * Introduction to standard approaches used in ChIP Seq
+   * Analyses for peak calling
+   * Calculation of differential binding across samples
+   * The annotation and plotting of peaks
+
 
 Purpose
 =======
