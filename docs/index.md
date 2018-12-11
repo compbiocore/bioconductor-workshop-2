@@ -7,7 +7,7 @@
 
 ## Goals
 
-This workshop, 'R/Bioconductor Workshop for Differential Expression Analysis', is designed to introduce attendees DEseq and its analysis pipeline; it is an intermediate-level lecture that presupposes some knowledge of R like that found in our 'Fundamentals of R' workshop.  This workshop is **not** a direct sequel to 'R/Bioconductor Workshop for Genomic Data Analysis', and that material is not required to understand this content.
+This workshop, 'Analyses of RNA-seq and ChiP-seq with R/Bioconductor', is primarily designed to introduce attendees DEseq and its analysis pipeline; it is an intermediate-level lecture that presupposes some knowledge of R like that found in our 'Fundamentals of R' workshop.  This workshop is **not** a direct sequel to 'R/Bioconductor Workshop for Genomic Data Analysis', and that material is not required to understand this content.
 
 Here, users will learn how to perform exploratory data analysis on RNA-seq data, then use that data (if appropriate) to conduct a complete differential expression and gene-set analysis.  The workshop will discuss how to interpret the results of the exploratory analyses it presents and what they say about the data's quality, as well as offer advice on how to make the data more suitable for analysis.  It takes the user from a raw table of counts all the way to a set of differentially expressed genes and their pathways - the traditional endpoint for an RNA-seq analysis.
 
